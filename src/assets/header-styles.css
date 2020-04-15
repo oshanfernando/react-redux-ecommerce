@@ -67,11 +67,11 @@
 	float: right;
 }
 
-.header-login-signup .header-limiter ul li {
-	display: inline-block;
-	margin-left: 25px;
-	opacity:0.9;
-}
+	.header-login-signup .header-limiter ul li {
+		display: inline-block;
+		margin-left: 25px;
+		opacity:0.9;
+	}
 
 .header-login-signup .header-limiter ul li:hover{
 	opacity: 1;
@@ -84,7 +84,7 @@
 
 	.header-login-signup {
 		padding: 25px;
-		height: 85px;
+		height: 110px;
 	}
 
 	.header-login-signup .header-limiter h1 {
@@ -105,9 +105,14 @@
 	}
 
 	.header-login-signup .header-limiter ul {
-		display: none;
+		margin: 0;
+		float: none;
+		padding: 0;
 	}
 
+	.header-login-signup .header-limiter ul li a {
+		margin: 0;
+	}	
 }
 
 .badge {

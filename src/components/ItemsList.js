@@ -73,7 +73,7 @@ export const ItemsList = () => {
     }
 
     return (
-        <Card.Group itemsPerRow={4}>
+        <Card.Group stackable itemsPerRow={4}>
             {
                 products.map(item => {
                     return (
@@ -85,7 +85,7 @@ export const ItemsList = () => {
                                     disabled = {disabledItems.indexOf(item.id) > -1 }
                                     data-id={item.id}
                                     onClick={addItem} 
-                                    floated="right" color="gray" size="large" animated='fade'>
+                                    floated="right" color="grey" size="large" animated='fade'>
                                     <Button.Content visible>$ {item.price}</Button.Content>
                                     <Button.Content hidden>Add to Cart</Button.Content>
                                 </Button>
