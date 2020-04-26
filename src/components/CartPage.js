@@ -14,7 +14,7 @@ export const CartPage = () => {
         <div>
             <Header />
             <br />
-            <h1 style={{"textAlign":"center"}}>Shopping Cart</h1>
+            <h1 style= {{"textAlign":"center","marginTop":"100px"}}>Shopping Cart</h1>
             <Item.Group divided style={{"margin":"20px 50px"}}>
                 {
                     cartItems.map(item => {

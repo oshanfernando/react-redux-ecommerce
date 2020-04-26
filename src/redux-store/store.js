@@ -7,9 +7,9 @@ import storage from 'redux-persist/lib/storage'
 const middleware = [thunk]
 
 const persistConfig = {
-    key: 'cart',
+    key: 'requiredData',
     storage: storage,
-    whitelist: ['cart']
+    whitelist: ['cart', 'user']
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

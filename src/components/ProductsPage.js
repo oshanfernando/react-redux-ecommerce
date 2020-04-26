@@ -1,17 +1,14 @@
 import React from 'react'
 import { Header } from './Header'
 import 'semantic-ui-css/semantic.min.css'
-import { Container} from 'semantic-ui-react'
 import { ItemsList } from './ItemsList'
 
-export const ProductsPage = () => {
+export const ProductsPage = (props) => {
     return (
         <div>
             <Header />
-            <h1 style= {{"textAlign":"center"}}>Products</h1>
-            <Container style= {{"marginTop":"30px"}}>
-                <ItemsList/>
-            </Container>
+            <h1 style= {{"textAlign":"center","marginTop":"110px"}}>Products</h1>
+            <ItemsList {...props}/>
             <br/>
             <p>Photo by veeterzy from Pexels | Photo by John Tekeridis from Pexels
             </p>

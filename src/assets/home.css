@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    /* Background styles */
+    background-image: url("/images/home2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-inner h1 {
+    font-size: 5em;
+
+    margin-top: 0;
+    margin-bottom: 0.5em;
+
+    color: white;
+}
+
+.hero h2 {
+
+    color: white;
+}
+
+.hero .btn {
+    /* Positioning and sizing */
+    display: block;
+    width: 200px;
+    
+    /* Padding and margins */
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Text styles */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.5em;
+    
+    /* Border styles */
+    border: 3px solid white;
+    border-radius: 20px;
+}
+
+@media all and (max-width: 600px) {
+
+    .hero-inner h1 {
+        font-size: 2.5em;
+    }
+
+    .hero h2 {
+
+        font-size: 1.5em;
+    }
+}

@@ -73,6 +73,5 @@ const getTotal = (orderCount) =>{
     orderCount.forEach(element => {
         total += (element.price * element.qty)
     });
-    console.log("new total ", total)
     return total;
 }

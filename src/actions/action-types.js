@@ -1,4 +1,7 @@
 export const ADD_TO_CART = "ADD_TO_CART"
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART"
 export const CHANGE_TOTAL = "CHANGE_TOTAL"
-
+export const LOGIN = "LOGIN"
+export const LOGOUT = "LOGOUT"
+export const SIGNUP = "SIGNUP"
+export const CREATING_USER = "CREATING_USER"

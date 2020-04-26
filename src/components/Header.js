@@ -2,28 +2,40 @@ import React from 'react'
 import '../assets/header-styles.css'
 import { Link } from 'react-router-dom'
 import { Icon } from 'semantic-ui-react'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
+import {logout} from '../actions/user-actions'
 
 export const Header = () => {
 
-    const itemCount = useSelector(state => state.cart.cartItems).length
+    const itemCount = useSelector(state => state.cart.cartItems).length;
+    const name = useSelector(state => state.user.name);
+    const loggedIn = useSelector(state => state.user.loginSuccess);
+
+    const dispatch = useDispatch();
+
+    const clickLogout = () => {
+        dispatch(logout())
+    }
 
     return (
+        <div className="header">
         <header className="header-login-signup">
 
             <div className="header-limiter">
 
-                <h1><Link to="#">Ecommerce<span>Demo</span></Link></h1>
+                <h1><Link to="/">Company</Link></h1>
 
                 <nav>
-                    {/* <Link to="#">Home</Link> */}
                     <Link to="/products">Products</Link>
-                    <Link to="#">About</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/protected">Protected</Link>
                 </nav>
 
                 <ul>
-                    <li><Link to="#">Login</Link></li>
-                    <li><Link to="#">Sign up</Link></li>
+                    {name === "" ? (
+                        <li><Link to="/login">Login</Link></li> 
+                    ) : "" }
+                    <li><Link to="/signup">Sign up</Link></li>
                     <li><Link to="/cart">
                         {
                             <i>
@@ -33,10 +45,19 @@ export const Header = () => {
                         }
                         </Link>
                     </li>
+                    { loggedIn ? 
+                        <li onClick={clickLogout}>
+                            {name} 
+                            <Icon size="large" 
+                            style={{"marginLeft":"10px"}} 
+                            name="power"/>
+                        </li> : ""
+                    }
                 </ul>
 
             </div>
 
         </header>
+        </div>
     )
 }
