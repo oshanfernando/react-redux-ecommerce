@@ -22,7 +22,7 @@ export const LoginForm = (props) => {
             setErrorMsg("This is a protected route, You must login to continue. Use john@test.com to login")
             setHasError(true)
         } else {
-            setErrorMsg("Use john@test.com to login")
+            setErrorMsg("Use john@test.com with any password to login")
             setHasError(true)
         }
         if (loginSuccess) {
