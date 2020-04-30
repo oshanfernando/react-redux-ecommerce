@@ -21,6 +21,9 @@ export const LoginForm = (props) => {
         if (props.location.redirected) {
             setErrorMsg("This is a protected route, You must login to continue. Use john@test.com to login")
             setHasError(true)
+        } else {
+            setErrorMsg("Use john@test.com to login")
+            setHasError(true)
         }
         if (loginSuccess) {
             props.history.push("/protected")
