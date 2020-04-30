@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is a sample ecommerce web application developed using ReactJS showcasing the usage of functional components with react hooks rather than using class based components.
+
+A Redux store is used to maintain the application wide state, `redux-thunk` as a middleware and `redux-persist` to save some data on the local storage.
+
+The actions and reducers are pretty straightforward. I have returned some hardcoded data in the actions creators as this is not connected with the backend. You can change those reducers to communicate with your backend to fetch the data.
+
+<br/>
+
 ## Available Scripts
 
 In the project directory, you can run:
